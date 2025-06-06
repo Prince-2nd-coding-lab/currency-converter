@@ -3,23 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>XYZ-currency converter</title>
+    <link rel="shortcut icon" href="titleicon.png" type="image/x-icon">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div class="container">
         <h1 class="title">XYZ-currency converter</h1>
         <div class="main">
-            <input type="number" placeholder="amount : e,g 1000">
+            <input type="number" placeholder="amount : e,g 1000" id="amount">
             <h1 class="from">from :</h1>
             <select name="from" id="from-option"></select>
             <h1 class="to">to :</h1>
             
-            <select name="to" id="to-option"></select>
+            <select name="to" id="to-option">
+                <option value="RWF">( RWF )Rwandan Francs </option>
+            </select>
 
-            <button>convert</button>
+            <button onclick="convert()">convert</button>
+            <div id="loader" class="spinner"></div>
+            <h1 id="result">result : <span id="resultNUM">000</span></h1>
         </div>
+
+        
     </div>
     <div class="bottom"></div>
+
+    <script src="index.js"></script>
 </body>
 </html>

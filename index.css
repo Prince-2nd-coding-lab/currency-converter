@@ -60,6 +60,7 @@
     left: 54vh;
     height: 7vh;
     width: 20vh;
+    text-align: center;
 }
 .to{
     position: absolute;
@@ -75,6 +76,7 @@
     left: 83vh;
     height: 7vh;
     width: 20vh;
+    text-align: center;
 }
 button{
     position: absolute;
@@ -89,5 +91,31 @@ button{
     color: white;
     border: none;
     font-size: 2.5vh;
+    cursor: pointer;
 
 }
+#result{
+    position: absolute;
+    top: 40vh;
+    left: 78vh;
+    text-transform: capitalize;
+    font-size: 3vh;
+
+}
+
+    .spinner {
+      position: absolute;
+      top: 30vh;
+      left: 90vh;
+      border: 5px solid rgba(0, 0, 0, 0.1);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border-top-color: #09f;
+      animation: spin 1s infinite linear;
+      margin: 40px auto;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
