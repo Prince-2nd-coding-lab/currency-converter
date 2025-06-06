@@ -1,3 +1,121 @@
+let data = [
+  {
+    "code": "USD",
+    "name": "United States Dollar",
+    "flag": "🇺🇸"
+  },
+  {
+    "code": "EUR",
+    "name": "Euro",
+    "flag": "🇪🇺"
+  },
+  {
+    "code": "JPY",
+    "name": "Japanese Yen",
+    "flag": "🇯🇵"
+  },
+  {
+    "code": "GBP",
+    "name": "British Pound",
+    "flag": "🇬🇧"
+  },
+  {
+    "code": "AUD",
+    "name": "Australian Dollar",
+    "flag": "🇦🇺"
+  },
+  {
+    "code": "CAD",
+    "name": "Canadian Dollar",
+    "flag": "🇨🇦"
+  },
+  {
+    "code": "CHF",
+    "name": "Swiss Franc",
+    "flag": "🇨🇭"
+  },
+  {
+    "code": "CNY",
+    "name": "Chinese Yuan",
+    "flag": "🇨🇳"
+  },
+  {
+    "code": "INR",
+    "name": "Indian Rupee",
+    "flag": "🇮🇳"
+  },
+  {
+    "code": "BRL",
+    "name": "Brazilian Real",
+    "flag": "🇧🇷"
+  },
+  {
+    "code": "ZAR",
+    "name": "South African Rand",
+    "flag": "🇿🇦"
+  },
+  {
+    "code": "RWF",
+    "name": "Rwandan Franc",
+    "flag": "🇷🇼"
+  },
+  {
+    "code": "KES",
+    "name": "Kenyan Shilling",
+    "flag": "🇰🇪"
+  },
+  {
+    "code": "NGN",
+    "name": "Nigerian Naira",
+    "flag": "🇳🇬"
+  },
+  {
+    "code": "EGP",
+    "name": "Egyptian Pound",
+    "flag": "🇪🇬"
+  },
+  {
+    "code": "MXN",
+    "name": "Mexican Peso",
+    "flag": "🇲🇽"
+  },
+  {
+    "code": "RUB",
+    "name": "Russian Ruble",
+    "flag": "🇷🇺"
+  },
+  {
+    "code": "KRW",
+    "name": "South Korean Won",
+    "flag": "🇰🇷"
+  },
+  {
+    "code": "SAR",
+    "name": "Saudi Riyal",
+    "flag": "🇸🇦"
+  },
+  {
+    "code": "TRY",
+    "name": "Turkish Lira",
+    "flag": "🇹🇷"
+  },
+  { "code": "SEK", "name": "Swedish Krona", "flag": "🇸🇪" },
+  { "code": "NOK", "name": "Norwegian Krone", "flag": "🇳🇴" },
+  { "code": "DKK", "name": "Danish Krone", "flag": "🇩🇰" },
+  { "code": "SGD", "name": "Singapore Dollar", "flag": "🇸🇬" },
+  { "code": "HKD", "name": "Hong Kong Dollar", "flag": "🇭🇰" },
+  { "code": "NZD", "name": "New Zealand Dollar", "flag": "🇳🇿" },
+  { "code": "TWD", "name": "New Taiwan Dollar", "flag": "🇹🇼" },
+  { "code": "AED", "name": "UAE Dirham", "flag": "🇦🇪" },
+  { "code": "ARS", "name": "Argentine Peso", "flag": "🇦🇷" },
+  { "code": "PKR", "name": "Pakistani Rupee", "flag": "🇵🇰" },
+  { "code": "THB", "name": "Thai Baht", "flag": "🇹🇭" },
+  { "code": "IDR", "name": "Indonesian Rupiah", "flag": "🇮🇩" },
+  { "code": "MYR", "name": "Malaysian Ringgit", "flag": "🇲🇾" },
+  { "code": "UAH", "name": "Ukrainian Hryvnia", "flag": "🇺🇦" },
+  { "code": "VND", "name": "Vietnamese Dong", "flag": "🇻🇳" }
+];
+
 let api_key = '2b54ce03b2eef396fba470d3';
 
     let resultNUM = document.getElementById('resultNUM');
@@ -7,10 +125,7 @@ let api_key = '2b54ce03b2eef396fba470d3';
     loader.style.display="none";
 
 
-fetch('./currencies_with_flags.json')
 
-.then(Response => Response.json())
-.then(data =>{
     data.forEach(item => {
         let from_option = document.getElementById('from-option');
         from_option.innerHTML += `
@@ -23,7 +138,6 @@ fetch('./currencies_with_flags.json')
         `
     });
     
-});
 
 function convert(){
     let from = document.getElementById('from-option').value;
